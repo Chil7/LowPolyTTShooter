@@ -55,6 +55,7 @@ public class PlayerMovement : MonoBehaviour
 
     void ApplyPlayerMovement()
     {
+        //This converts the value that is read from the inputs to movement
         motion += transform.forward * motionValue.y * currSpeed * Time.deltaTime;
         motion += transform.right * motionValue.x * currSpeed * Time.deltaTime;
         motion.y += velocity;
