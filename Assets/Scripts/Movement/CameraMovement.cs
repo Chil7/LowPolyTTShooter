@@ -12,6 +12,7 @@ public class CameraMovement : MonoBehaviour
     private float rotX = 0.0f;
 
     private Transform character;
+    private GameObject player;
 
     [SerializeField] private float rotationSensitivity = 100f;
     [HideInInspector] private float clampAngle = 80.0f;
@@ -20,8 +21,10 @@ public class CameraMovement : MonoBehaviour
     {
         controls = new PlayerControls();
 
+        //Camera Movement
         controls.Player.Rotation.performed += ctx => rotationValue = ctx.ReadValue<Vector2>();
         controls.Player.Rotation.canceled += ctx => rotationValue = Vector2.zero;
+
     }
 
     private void Start()

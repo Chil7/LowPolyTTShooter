@@ -229,6 +229,7 @@ GameObject:
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
   - component: {fileID: 963194229}
+  - component: {fileID: 963194230}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -323,6 +324,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSensitivity: 100
+--- !u!114 &963194230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ff6f50e89c0d948ad3299d1c665406, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedWeapon: 0
 --- !u!1 &1291152672
 GameObject:
   m_ObjectHideFlags: 0
@@ -443,9 +457,10 @@ GameObject:
   - component: {fileID: 1968482196}
   - component: {fileID: 1968482201}
   - component: {fileID: 1968482200}
+  - component: {fileID: 1968482202}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -577,7 +592,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 47c8c2bd28aea6143865a55ac564d619, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currSpeed: 0
   walkSpeed: 4
   sprintSpeed: 6
   hurtSpeed: 2.5
   reloadWalkSpeed: 1.5
+--- !u!114 &1968482202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968482195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875df7c9b7de7614aa8fcb1195573ac2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  psitolAmmo: 0
+  shotgunAmmo: 0
+  assaultRifleAmmo: 0
+  sniperRifleAmmo: 0
+  grenadeCount: 0
